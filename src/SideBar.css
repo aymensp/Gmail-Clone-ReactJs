@@ -15,6 +15,9 @@ display: flex;
 justify-content: center;
 
 }
-.sidebar_footerIcon{
 
+.sidebar{
+    flex: 0.3;
+    max-width: 300px;
+    padding-right: 20px;
 }
