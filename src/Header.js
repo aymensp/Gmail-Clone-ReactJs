@@ -20,7 +20,7 @@ function Header() {
 
             </div>
             <div className='header_middle'>
-                <SearchIcon style={{ color:'gray-900'}}/>
+                <SearchIcon style={{ color:'gray-800'}}/>
                 <input placeholder='Search mail' type='text'/>
                 <TuneIcon className='header_inputCaret'/>
 
