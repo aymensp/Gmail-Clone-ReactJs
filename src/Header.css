@@ -21,6 +21,7 @@ border-bottom: 1px solid whitesmoke;
     background-color: whitesmoke;
     padding: 10px;
     border-radius: 5px;
+    
 }
 .header_inputCaret{
 color: gray;
@@ -36,5 +37,11 @@ color: gray;
 }
 .header_right {
     display: flex;
-    
+align-items: center;
+padding-right: 20px;
+}
+.avatar {
+    margin-left: 10px !important;
+    color: aqua;
+   
 }
