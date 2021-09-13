@@ -1,6 +1,6 @@
 .mailList{
 flex: 1;
-overflow: scroll;
+
 }
 .mailList_settings{
 display: flex;
