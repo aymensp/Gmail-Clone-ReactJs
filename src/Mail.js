@@ -1,5 +1,5 @@
 import React from 'react'
-import "./MailList"
+import "./Mail.css"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack"
 import MoveToInboxIcon from "@material-ui/icons/MoveToInbox"
 import ErrorIcon from "@material-ui/icons/Error"
@@ -9,12 +9,15 @@ import WatchLaterIcon from "@material-ui/icons/WatchLater"
 import CheckCircleIcon from "@material-ui/icons/CheckCircle"
 import LabelImportantIcon from "@material-ui/icons/LabelImportant"
 import MoreVertIcon from "@material-ui/icons/MoreVert"
+import UnfoldMoreIcon from "@material-ui/icons/UnfoldMore"
+import PrintIcon from "@material-ui/icons/Print"
+import ExitToAppIcon from "@material-ui/icons/ExitToApp"
 import { IconButton } from '@material-ui/core'
 import { Label } from '@material-ui/icons'
 import { useHistory } from 'react-router'
 
 function Mail() {
-const history = useHistory();
+    const history = useHistory();
 
     return (
         <div className="mail">
@@ -24,7 +27,7 @@ const history = useHistory();
 
                 <div className="mail__toolsLeft">
                     <IconButton>
-                        <ArrowBackIcon onClick={()=> history.push("/")} />
+                        <ArrowBackIcon onClick={() => history.push("/")} />
                     </IconButton>
                     <IconButton>
                         <MoveToInboxIcon />
@@ -55,7 +58,27 @@ const history = useHistory();
                     </IconButton>
                 </div>
                 <div className="mail__toolsRight">
-
+                    <IconButton>
+                        <UnfoldMoreIcon />
+                    </IconButton>
+                    <IconButton>
+                        <PrintIcon />
+                    </IconButton>
+                    <IconButton>
+                        <ExitToAppIcon />
+                    </IconButton>
+                </div>
+            </div>
+            
+            <div className='mail__body'>
+                <div className="mail__bodyHeader">
+                    <h2> Subject</h2>
+                    <LabelImportantIcon className="mail__important" />
+                    <p>Title</p>
+                    <p className="mail__time">10pm </p>
+                </div>
+                <div className="mail__message">
+                    <p>This is a message</p>
                 </div>
             </div>
         </div>
