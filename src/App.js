@@ -23,7 +23,7 @@ function App() {
           <Route path="/" component={MailList}/>
         </Switch>
         </div>
-       
+       <SendMail />
       </div>
     </Router>
 
