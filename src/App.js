@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Mail from './Mail';
 import MailList from './MailList';
+import SendMail from './SendMail';
 
 function App() {
   return (
