@@ -18,17 +18,18 @@
 
 .emailRow__title {
     font-size: 13px;
-    flex: 0.3;
+    flex: 0.1;
 }
 
 .emailRow__message {
     display: flex;
-    flex: 0.8;
+    flex: 0.9;
     align-items: center;
     font-size: 13px;
 }
 .emailRow__message >h4 {
-    width: 400px;
+
+    width: 300px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -36,9 +37,12 @@
     padding-right: 5px;
 }
 .emailRow__time {
-padding-right: 15px;
-font-size: 9px;
+padding-right: 20px;
+font-size: 12px;
 font-weight: bold;
+position: absolute;
+right: 0;
+flex: 0.1;
 }
 
 .emailRow__description {

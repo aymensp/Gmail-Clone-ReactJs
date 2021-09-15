@@ -13,7 +13,6 @@ import UnfoldMoreIcon from "@material-ui/icons/UnfoldMore"
 import PrintIcon from "@material-ui/icons/Print"
 import ExitToAppIcon from "@material-ui/icons/ExitToApp"
 import { IconButton } from '@material-ui/core'
-import { Label } from '@material-ui/icons'
 import { useHistory } from 'react-router'
 
 function Mail() {
