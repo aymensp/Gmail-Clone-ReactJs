@@ -17,15 +17,15 @@
 }
 
 .emailRow__title {
-    font-size: 13px;
-    flex: 0.1;
+    font-size: 16px;
+    flex: 0.2;
 }
 
 .emailRow__message {
     display: flex;
     flex: 0.9;
     align-items: center;
-    font-size: 13px;
+    font-size: 16px;
 }
 .emailRow__message >h4 {
 
@@ -38,7 +38,7 @@
 }
 .emailRow__time {
 padding-right: 20px;
-font-size: 12px;
+font-size: 13px;
 font-weight: bold;
 position: absolute;
 right: 0;

@@ -1,5 +1,5 @@
 import { Button, IconButton } from '@material-ui/core'
-import React from 'react'
+import React, { useEffect ,useState} from 'react'
 import "./SideBar.css"
 import AddIcon from '@material-ui/icons/Add'
 import SideBarOption from './SideBarOption'
@@ -15,12 +15,22 @@ import DuoIcon from '@material-ui/icons/Duo'
 import PhoneIcon from '@material-ui/icons/Phone'
 import { useDispatch } from 'react-redux'
 import { openSendMessage } from './features/counter/mailSlice'
+import { db } from './firebase'
 
 
 
 
 function SideBar() {
+    const [emails, setEmails] = useState([])
     const dispatch =useDispatch();
+    useEffect(() => {
+        db.collection('emails').orderBy('timestamp', 'desc').onSnapshot
+            (snapshot => setEmails(snapshot.docs.map(doc => ({
+                id: doc.id,
+                data: doc.data(),
+            }))))
+    }, [])
+    
     return (
         <div className="sidebar">
             <Button
@@ -30,11 +40,11 @@ function SideBar() {
             > 
                 Compose
             </Button>
-            <SideBarOption Icon={InboxIcon} title="Inbox" number={54} selected={true}/>
+            <SideBarOption Icon={InboxIcon} title="Inbox" number={54} />
             <SideBarOption Icon={StarIcon} title="Starred" number={32}/>
             <SideBarOption Icon={AccessTimeIcon} title="Snoozed" number={12}/>
             <SideBarOption Icon={LabelImportantIcon} title="Important" number={20}/>
-            <SideBarOption Icon={NearMeIcon} title="Sent" number={43}/>
+            <SideBarOption Icon={NearMeIcon} title="Sent" number={emails.length} selected={true} />
             <SideBarOption Icon={NoteIcon} title="Drafts" number={11}/>
             <SideBarOption Icon={ExpandMoreIcon} title="More" number={2}/>
             <div className="sidebar_footer">
