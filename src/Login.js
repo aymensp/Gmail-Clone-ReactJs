@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core'
 import React from 'react'
-import { login, logout } from './features/counter/userSlice';
+import { useDispatch } from 'react-redux';
+import { login } from './features/counter/userSlice';
 import { auth, provider } from './firebase'
 import './Login.css'
 function Login() {
@@ -17,7 +18,7 @@ function Login() {
         })
         .catch (error => alert(error.message));
     }
-    
+
     return (
         <div className='login'>
             <div className='login__container'>

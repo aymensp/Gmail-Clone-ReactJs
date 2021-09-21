@@ -43,5 +43,6 @@ padding-right: 20px;
 .avatar {
     margin-left: 10px !important;
     color: aqua;
+    cursor: pointer !important;
    
 }
